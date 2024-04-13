@@ -5,7 +5,6 @@ import tempfile
 import config
 import telebot
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
-# import mysql.connector
 
 from outline_vpn.outline_vpn import OutlineVPN # type: ignore
 
@@ -13,14 +12,6 @@ client = OutlineVPN(
     api_url="https://46.151.31.207:34962/Tga-GXHdr3y1ipdxPmEy5w",
     cert_sha256=config.OUTLINE_CERT,
 )
-# database = mysql.connector.connect(
-#     host="82.199.101.138",
-#     user="telegram_vpn_bot",
-#     password='>u,8tctpAgf["Bs;',
-#     database="proxy_telegram_bot",
-#     consume_results=True,
-# )
-
 
 bot = telebot.TeleBot(config.TOKEN)
 
